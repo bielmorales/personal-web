@@ -54,35 +54,35 @@ function HomeContent() {
   return (
     <div className="flex flex-col h-screen">
       <header className="bg-blue-800 text-white py-4">
-        <div className="flex justify-between items-center px-8">
-          <div>Gabriel dos Reis Morales</div>
+        <div className="flex justify-between items-center px-4 sm:px-8">
+          <div className="text-sm sm:text-base">Gabriel dos Reis Morales</div>
           <div>
             <button
               onClick={handleCopyEmail}
-              className="mr-4 px-4 py-2 bg-blue-800 rounded hover:bg-blue-900"
+              className="text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 bg-blue-800 rounded hover:bg-blue-900"
             >
-              Contact me
+              Email
             </button>
             <a
               href="https://calendly.com/bielmorales93"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="mr-4 px-4 py-2 bg-blue-800 rounded hover:bg-blue-900">
-                Schedule a call
+              <button className="text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 bg-blue-800 rounded hover:bg-blue-900">
+                Book a call
               </button>
             </a>
             <a href="/resume.pdf" download>
-              <button className="px-4 py-2 bg-blue-800 rounded hover:bg-blue-900">
+              <button className="text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 bg-blue-800 rounded hover:bg-blue-900">
                 Resume
               </button>
             </a>
           </div>
         </div>
       </header>
-      <main className="flex-grow flex items-center justify-center p-4 bg-main-background">
-        <div className="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
-          <h1 className="text-xl font-bold text-blue-900 mb-4">
+      <main className="flex-grow flex items-center justify-center p-2 sm:p-4 bg-main-background">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 max-w-full sm:max-w-lg w-full">
+          <h1 className="text-lg sm:text-xl font-bold text-blue-900 mb-4">
             What do you want to know about my professional experience?
           </h1>
           <input
@@ -90,11 +90,11 @@ function HomeContent() {
             placeholder="Eg: Do you have experience working with Next.js?"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
-            className="form-input w-full px-4 py-3 border-2 border-blue-900 focus:border-blue-800 rounded-md mb-4"
+            className="form-input w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-blue-900 focus:border-blue-800 rounded-md mb-4"
           />
           <button
             onClick={() => mutate(question)}
-            className="px-6 py-3 bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full"
           >
             {isLoading ? "Loading..." : "Get Answer"}
           </button>
