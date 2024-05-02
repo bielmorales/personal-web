@@ -15,8 +15,10 @@ export default function Home() {
   );
 }
 
+const url = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
 const getAnswer = async (question: string) => {
-  const response = await fetch("http://localhost:3000/get-answer", {
+  const response = await fetch(`${url}/get-answer`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
