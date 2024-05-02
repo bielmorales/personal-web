@@ -15,7 +15,7 @@ export default function Home() {
   );
 }
 
-export const getAnswer = async (question: string) => {
+const getAnswer = async (question: string) => {
   const response = await fetch("http://localhost:3000/get-answer", {
     method: "POST",
     headers: {
